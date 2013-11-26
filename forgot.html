@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Loose4Good-Forgot password</title>
+<script>
+function myForgot()
+{var email=document.forms["forgotform"]["email"].value;
+var atloc=email.indexOf("@");
+if (atloc<0)
+	alert("Invalid user ID");
+if (email!="admin@gmail.com")
+	alert("user do not exist in our system");
+else
+	alert("Password has been sent to "+email+".");
+}
+</script>
+</head>
+<body>
+<form name="forgotform">
+<br><br>
+<p> Please submit the email ID on which the new passowrd can be sent</p>
+<input type="text" name="email" size="12" /><br><br>
+<input type="button" name="submit" value="Submit" onclick="myForgot()"/> 
+</form>
+</body>
+</html>
